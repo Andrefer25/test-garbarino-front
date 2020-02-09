@@ -8,8 +8,7 @@
 
 ```javascript
 
-/* Antes que nada, dejar ejecutado MongoDB (puede ser con el comando mongod o yendo a la carpeta
-   donde está instalado y ejecutar mongod.exe y luego mongo.exe=
+/* Antes que nada, ya debe estar ejecutandose el backend (https://github.com/Andrefer25/test-garbarino-back)
 */
 
 /* Instalar los paquetes de NPM */
@@ -19,4 +18,3 @@ npm install
 npm start
 
 ```
-El código está comentado con las decisiones que tomé y el porqué de estas
