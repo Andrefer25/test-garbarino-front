@@ -1,0 +1,710 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f6f6f6;
+}
+
+nav {
+  margin-bottom: 2em;
+}
+
+.altnavbar {
+  margin: 0;
+  background-color: #A01B1D;
+}
+
+.princnavbar {
+  background-color: rgb(216, 13, 13);
+}
+
+.navbar {
+  padding: 0.5em 1em;
+}
+
+.container {
+  margin: auto 300px;
+}
+
+@media only screen and (max-width: 1800px) {
+  .container {
+      margin: auto 108px;
+  }
+}
+
+@media only screen and (min-width : 0px) and (max-width : 1500px) {
+  .promoCuotas {
+      display: none;
+  }
+}
+
+.nav-grid {
+  display: grid;
+  display: -ms-grid;
+  grid-template-areas: "columna1 columna2 columna3";
+  width: 100%;
+}
+
+.logo { -ms-grid-row: 1; -ms-grid-column: 1; grid-area: columna1; }
+
+.logo img {
+  width: 232px;
+  margin-top: 0.3em;
+  margin-right: 3em;
+}
+
+.buscador {
+  position: relative;
+  -ms-grid-row: 1; -ms-grid-column: 2; grid-area: columna2;
+  width: 600px;
+  margin-top: 0.7em;
+  margin-right: 3em;
+}
+
+.buscador input {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  color: #333;
+  display: block;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0em 0em 0em 1em;
+}
+
+.buscador .buscadorBoton img {
+  width: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.buscador .buscadorBoton {
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid #E2E2E2;
+  height: 28px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 43%;
+  transform: translateY(-50%);
+  width: 45px;
+  margin-right: -1em;
+}
+
+.logo img:hover, .buscador .buscadorBoton:hover, .promoCuotas p:hover {
+  cursor: pointer;
+}
+
+.promoCuotas { -ms-grid-row: 1; -ms-grid-column: 3; grid-area: columna3; }
+
+.promoCuotas p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 2em;
+}
+
+.subnav-list, .altnav .altnav-list, .listaHora{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.subnav-list {
+  margin-left: -0.5em;
+  margin-top: 1em;
+}
+
+.subnav-list li, .altnav .altnav-list li, .listaHora li { 
+  display: inline-flex;  
+}
+
+.altnav .altnav-list li { 
+  padding: 0.6em 1.1em;
+  color: #fff;
+  border-right: 1px solid rgba(51,51,51,0.2);
+  font-size: 13px;
+}
+
+.altnav .altnav-list li:hover {
+  background-color: rgba(51,51,51,0.2);
+  cursor: pointer;
+}
+
+.subnav-list li {
+  color: #fff;
+  font-size: 1em;
+  margin: 0 10px;
+}
+
+.subnav-list li:first-child {
+  font-weight: bold;
+}
+
+.subnav-list li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/********/
+
+.productosPromo {
+  background-color: #fff;
+  border: 1px solid #E2E2E2;
+  padding: 2em;
+  display: grid;
+  display: -ms-grid;
+  grid-template-areas: "columna1 columna2 columna3 columna4 columna5 columna6 columna7 columna8";
+  overflow-x: scroll;
+  margin-bottom: 2em;
+}
+
+.productosPromo::-webkit-scrollbar {
+  width: 7px;
+  height: 10px;
+}
+
+.productosPromo::-webkit-scrollbar-thumb {
+  background: rgb(216, 13, 13);
+  border-radius: 5px;
+}
+
+.ofertas {
+  color: #000;
+  vertical-align: middle;
+  width: 240px;
+  left: 0;
+  margin-left: -2em;
+  margin-top: 1.3em;
+}
+
+.ofertas h3 {
+  font: inherit;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.ofertas h3 strong {
+  font-size: 1.6em;
+}
+
+.ofertas .horario {
+  margin: 10px 0;
+  text-align: center;
+  min-height: 42px;
+}
+
+.ofertas div em {
+  font-size: 34px;
+  color: #0084E0;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 3px;
+  font-style: normal;
+}
+
+.ofertas .hora {
+  display: inline-flex;
+  margin-left: 10px;
+  position: relative;
+  text-align: center;
+  width: 45px;
+}
+
+.ofertas .hora:first-child {
+  margin-left: 0;
+}
+
+.listaHora li {
+  font-size: 12px;
+  color: #9E9E9E;
+  text-transform: uppercase;
+  margin-right: 2.9em;
+}
+
+.listaHora {
+  margin-left: 3em;
+  margin-top: -1em;
+}
+
+.horario .hora .minutes:after, .horario .hora .seconds:after {
+  content: ":";
+  left: -12px;
+  position: absolute;
+}
+
+.ofertas button {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 20%;
+  font: inherit;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0 25px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  position: relative;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  background-color: #0084E0;
+  height: 40px;
+  line-height: 40px;
+  border-style: solid;
+  border-width: 1px 1px 2px;
+  color: #FFFFFF;
+  margin-top: 2em;
+}
+
+.ofertas button:hover {
+  background-color: rgb(4, 149, 253);
+}
+
+.productoEnOferta, .productoSugerencia {
+  width: 210px;
+  height: 260px;
+  transition: box-shadow 0.2s ease-out;
+}
+
+.productoEnOferta:hover, .productoSugerencia:hover {
+  box-shadow: 0em 0.2em 0.5em rgba(128, 128, 128, 0.658);
+  cursor: pointer;
+}
+
+.imagen {
+  margin: 0 auto 28px;
+  min-width: 160px;
+  padding-top: 160px;
+  position: relative;
+  text-align: center;
+  width: 160px;
+}
+
+.imagen img {
+  display: block;
+  height: auto;
+  left: 50%;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+  max-width: 100%;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.productoEnOferta:hover .imagen img, .productoSugerencia:hover .imagen img {
+  transition: all 0.2s ease-out;
+  transform: translate(-50%, -50%) scale(0.85);
+  opacity: .1;
+}
+
+.productoEnOferta:hover .imagen, .productoSugerencia:hover .imagen {
+  position: relative;
+  text-align: center;
+}
+
+.productoEnOferta .imagen .textoSuperpuesto, .productoSugerencia .imagen .textoSuperpuesto {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-overflow: ellipsis;
+  color: rgb(4, 149, 253);
+}
+
+.productoEnOferta:hover .imagen .textoSuperpuesto, .productoSugerencia:hover .imagen .textoSuperpuesto {
+  display: block;
+}
+
+.productoEnOferta:hover .texto, .productoSugerencia:hover .texto {
+  display: none;
+  margin: 0;
+}
+
+.productoEnOferta:hover .precio, .productoSugerencia:hover .precio {
+  margin-top:-0.85em;
+}
+
+.productoEnOferta .texto, .productoSugerencia .texto {
+  padding: 0em 0.8em;
+  margin-top: 0;
+  text-align: center;
+  margin-top: -1.9em; 
+}
+
+.productoEnOferta .texto p, .productoSugerencia .texto p {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  color: #333;
+  font-size: 15px;
+  line-height: initial;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.precio {
+  color: #9E9E9E;
+  text-align: center;
+  padding: 1em 0em;
+  min-height: 82.84px;
+}
+
+.precio .precioOferta{
+  color: #D1030F;
+  display: block;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.precio .precioLista del {
+  color: #9E9E9E;
+  margin: 0 3px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.precio .precioLista .descuento {
+  color: #0F7300;
+  margin: 0 3px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*******/
+
+.listaProductos, .listaSugerencias, .error404 {
+  display: grid;
+  display: -ms-grid;
+  grid-template-areas: "columna1 columna2 columna3 columna4 columna5";
+  margin-bottom: 2em;
+}
+
+.productoItem {
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #E2E2E2;
+  box-shadow: 0 0 0 0 rgba(0,0,0,0.33);
+  left: 0;
+  margin-bottom: 2rem;
+  width: 250px;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  margin-left: 0.6em;
+  margin-bottom: 1em;
+  transition: box-shadow 0.2s ease-out;
+}
+
+.productoItem:nth-child(5n-4){
+  margin-left: 0;
+}
+
+.productoItem:hover {
+  box-shadow: 0em 0.2em 0.5em rgba(128, 128, 128, 0.658);
+  cursor: pointer;
+}
+
+.productoItem .imagen {
+  margin-bottom: 2em;
+}
+
+.productoItem .precioNombre {
+  border-top: 1px solid #E2E2E2;
+  text-align: center;
+}
+
+.productoItem .precioNombre .nombre {
+  line-height: 40px;
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  max-height: 80px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+  box-sizing: content-box;
+  color: #333;
+  font-size: 0.875rem;
+  height: 2.5rem;
+  line-height: 1.313rem;
+  padding: 0px 16px 0px 16px;
+  margin-top: 0;
+}
+
+/********/
+
+footer {
+  background: rgb(216, 13, 13);
+  margin-bottom: -1em;
+  padding: 2em 0;
+  color: white;
+}
+
+.footer p {
+  margin-bottom: 0;
+  line-height: 18px;
+  font-size: 12px;
+}
+
+.footer strong {
+  line-height: 18px;
+  font-size: 12px;
+}
+
+/*********/
+
+.producto, .error404, .loading {
+  background-color: #fff;
+  border: 1px solid #E2E2E2;
+  padding: 2em;
+  margin-bottom: 2em;
+}
+
+.sugerencias {
+  background-color: #fff;
+  border: 1px solid #E2E2E2;
+  padding: 1em 2em;
+  margin-bottom: 2em;
+}
+
+.sugerencias .sugerenciasText {
+  font: inherit;
+  margin-top: 0;
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+  width: 100%;
+  border-bottom: 1px solid #E2E2E2;
+  margin-bottom: 0.5em;
+}
+
+.sugerencias .sugerenciasText p {
+  margin-top: 0.5em;
+}
+
+.listaSugerencias {
+  margin-bottom: 0;
+}
+
+.producto {
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 70% 30%;
+  margin-bottom: 2em;
+  padding-right: 0;
+  min-height: 607px;
+}
+
+.imagenYNombre .nombreProducto {
+  font-size: 22px;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.5;
+  padding-bottom: 1em;
+  border-bottom: 1px dashed #DFDFDF;
+}
+
+.imagenYNombre .imagenProducto {
+  text-align: center;
+}
+
+.imagenYNombre .imagenProducto .imagenBox {
+  margin: 2em auto;
+  width: 419px;
+}
+
+.imagenYNombre .imagenProducto .imagenBox img {
+  transition: all 0.2s ease-out;
+  height: auto;
+  max-height: 417px;
+}
+
+.imagenYNombre .imagenProducto .imagenBox:hover {
+  box-shadow: 0em 0.2em 0.5em rgba(128, 128, 128, 0.658);
+}
+
+.imagenYNombre .imagenProducto .imagenBox:hover img {
+  transition: all 0.2s ease-out;
+  transform: scale(0.85);
+}
+
+.precioYCuotas {
+  text-align: center;
+  border-left: 1px solid #DFDFDF;
+}
+
+.precioYCuotas .precio {
+  padding-top: 0;
+}
+
+.precioYCuotas .precio .precioOferta {
+  font-size: 35px;
+  line-height: 45px;
+}
+
+.precioYCuotas .precio .precioLista {
+  font-size: 16px;
+}
+
+.precioYCuotas .descripcion {
+  margin-top: 1em;
+  color: rgb(128, 128, 128);
+}
+
+.precioYCuotas .categoria {
+  margin-top: 3em;
+  font-weight: bold;
+}
+
+.precioYCuotas .descripcionBeneficios {
+  color: #0F7300;
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+
+.botonComprar, .botonDeshabilitado {
+  -webkit-font-smoothing: antialiased;
+  font-family: inherit;
+  margin: 0;
+  -webkit-appearance: button;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0 25px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 600;
+  white-space: nowrap;
+  border-style: solid;
+  border-width: 1px 1px 2px;
+  transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+  color: #FFFFFF;
+  background-color: #0084E0;
+  border-color: transparent transparent #3A9BDF;
+  text-decoration: none;
+  font-size: 18px;
+  height: 45px;
+  line-height: 45px;
+}
+
+.botonDeshabilitado {
+  background-color: rgb(128, 128, 128);
+  border: none;
+}
+
+.botonComprar:hover {
+  background-color: #3A9BDF;
+  cursor: pointer;
+}
+
+/*************/
+
+.error404 img {
+  width: 450px;
+}
+
+.error404 {
+  padding-bottom: 4em;
+  padding-right: 4em;
+}
+
+.error404 .textoError {
+  margin-left: 2em;
+  text-align: center;
+}
+
+.error404 .textoError h1 {
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  font-size: 3em;
+  font-style: italic;
+  color: rgb(216, 13, 13);
+}
+
+.error404 .textoError h2 {
+  font-size: 1.5em;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.error404 .textoError h3 {
+  font-size: 1.5em;
+  margin-top: 3em;
+}
+
+.error404 .textoError button {
+  margin-top: 3em;
+  padding: 0.5em 1em;
+  color: white;
+  background-color: rgb(216, 13, 13);
+  font-size: 1.3em;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-out;
+}
+
+.error404 .textoError button:hover {
+  cursor: pointer;
+  background-color: #A01B1D;
+}
+
+/*******************/
+
+.loading {
+  min-height: 607px;
+}
+
+.loadingAnimation {
+  border: 20px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 20px solid rgb(216, 13, 13);
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+  margin: 19% auto;
+}
+
+@-webkit-keyframes spin {
+  0% {
+      -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
