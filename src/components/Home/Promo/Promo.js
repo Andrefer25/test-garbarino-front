@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import PromoProducto from './Promo_Producto';
-import PromoContador from './PromoContador';
+import PromoProducto from './PromoProducto/Promo_Producto';
+import PromoContador from './PromoContador/PromoContador';
 
 const promoList = (productos) => {
     return productos.map(p => {

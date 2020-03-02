@@ -4,8 +4,8 @@ import Favicon from 'react-favicon';
 
 import Logo from '../assets/img/favicon_app.png';
 
-import ProductoDetalle from './ProductoDetalle';
-import Recomendado from './Recomendado';
+import ProductoDetalle from './ProductoDetalle/ProductoDetalle';
+import Recomendado from './Recomendado/Recomendado';
 
 class Producto extends Component {
 

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import Producto from './components/Producto';
-import Error from './components/Error';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import Home from './components/Home/Home';
+import Producto from './components/Producto/Producto';
+import Error from './components/Error/Error';
 
 class Router extends Component {
 

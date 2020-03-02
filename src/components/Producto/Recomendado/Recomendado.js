@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import RecomendadoProducto from './RecomendadoProducto';
+import RecomendadoProducto from './RecomendadoProducto/RecomendadoProducto';
 
 const recomendadoList = (productos) => {
     return productos.map(p => {

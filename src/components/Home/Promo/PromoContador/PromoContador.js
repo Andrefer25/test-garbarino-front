@@ -14,6 +14,10 @@ class PromoContador extends Component {
         },1000);
     }
 
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+
     getContador = () => {
         var date = new Date();
         var minutos = 60 - date.getMinutes();

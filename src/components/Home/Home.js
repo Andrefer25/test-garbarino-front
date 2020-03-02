@@ -4,8 +4,8 @@ import Favicon from 'react-favicon';
 
 import Logo from '../assets/img/favicon_app.png';
 
-import Promo from './Promo';
-import ListaProductos from './ListaProductos';
+import Promo from './Promo/Promo';
+import ListaProductos from './ListaProductos/ListaProductos';
 
 class Home extends Component {
 

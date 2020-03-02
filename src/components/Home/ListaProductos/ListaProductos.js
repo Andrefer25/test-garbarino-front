@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ItemProducto from './ItemProducto';
+import ItemProducto from './ItemProducto/ItemProducto';
 
 const productosList = (productos) => {
     return productos.map(p => {
